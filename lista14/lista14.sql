@@ -10,7 +10,7 @@
 
 	#Questão 3:
 	##Write a query to find the name (first_name, last_name) of the employees who have a manager and worked in a USA based department.
-	SELECT FIRST_NAME, LAST_NAME FROM employees WHERE EMPLOYEE_ID IN (SELECT DISTINCT MANAGER_ID FROM departments WHERE LOCATION_ID  IN (SELECT LOCATION_ID from locations where COUNTRY_ID='US'));
+	#SELECT FIRST_NAME, LAST_NAME FROM employees WHERE EMPLOYEE_ID IN (SELECT DISTINCT MANAGER_ID FROM departments WHERE LOCATION_ID  IN (SELECT LOCATION_ID from locations where COUNTRY_ID='US'));
 
 	#Questão 4:
 	#Write a query to find the name (first_name, last_name) of the employees who are managers
@@ -18,7 +18,7 @@
 
 	#Questão 5:
 	#Write a query to find the name (first_name, last_name), and salary of the employees whose salary is equal to the minimum salary for their job grade. 
-
+	SELECT FIRST_NAME, LAST_NAME, SALARY FROM employees WHERE SALARY > (SELECT AVG(SALARY) FROM employees);
 
 	#Questão 6:
 	#Write a query to find the name (first_name, last_name), and salary of the employees whose salary is equal to the minimum salary for their job grade
