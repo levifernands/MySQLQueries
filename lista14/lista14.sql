@@ -10,8 +10,7 @@
 
 	#Questão 3:
 	##Write a query to find the name (first_name, last_name) of the employees who have a manager and worked in a USA based department.
-
-
+	SELECT FIRST_NAME, LAST_NAME FROM employees WHERE EMPLOYEE_ID IN (SELECT DISTINCT MANAGER_ID FROM departments WHERE LOCATION_ID  IN (SELECT LOCATION_ID from locations where COUNTRY_ID='US'));
 
 	#Questão 4:
 	#Write a query to find the name (first_name, last_name) of the employees who are managers
@@ -27,3 +26,4 @@
 
 	#Questão 7:
 	#7. Write a query to find the name (first_name, last_name), and salary of the employees who earns more than the average salary and works in any of the IT departments.
+	#SELECT * FROM 
